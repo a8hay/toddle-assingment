@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "description": "Teacher-Student assingment, Microservice",
-  "main": "server.js",
+  "main": "microservice/server.js",
   "scripts": {
     "start": "node microservice/server.js",
     "server": "nodemon microservice/server.js"
