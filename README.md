@@ -1,5 +1,8 @@
 # toddle-assingment
 
+## Heroku deployment
+[Live API Endpoint](https://abhaytoddleassingment.herokuapp.com/)
+
 ## To run locally npm install && npm run server
 
 ### How to use API
