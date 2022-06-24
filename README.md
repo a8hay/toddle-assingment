@@ -4,6 +4,8 @@
 
 ### How to use API
 
+### import the following json file in postman
+
 [Postman API Collection](https://www.getpostman.com/collections/c2a9cba81066253576ab)
 
 ### Database Schema
