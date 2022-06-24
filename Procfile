@@ -1,1 +1,1 @@
-web: node /microservice/server.js
+web: npm start
