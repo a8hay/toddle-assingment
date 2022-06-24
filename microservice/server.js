@@ -4,6 +4,7 @@ import { connectDB } from './config/db.js'
 import express from 'express'
 import userRouter from './routes/userRoutes.js'
 import assingmentRouter from './routes/assingmentRoutes.js'
+import actionRouter from './routes/actionRouter.js'
 import errorHandler from './middlewares/errorMiddleware.js'
 const PORT = process.env.PORT || 5000
 
@@ -15,6 +16,7 @@ app.use(express.urlencoded({ extended: false }))
 
 app.use('/api/user', userRouter)
 app.use('/api/assingment', assingmentRouter)
+app.use('/api/', actionRouter)
 
 app.use(errorHandler)
 

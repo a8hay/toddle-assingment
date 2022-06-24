@@ -2,8 +2,9 @@ import mongoose from 'mongoose'
 
 const submissionSchema = mongoose.Schema(
   {
-    remark: {
-      type: String,
+    user: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'User',
     },
 
     assingment: {
@@ -11,9 +12,8 @@ const submissionSchema = mongoose.Schema(
       ref: 'Assingment',
     },
 
-    student: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'Student',
+    remark: {
+      type: String,
     },
   },
   { timestamps: true }
