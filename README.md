@@ -6,4 +6,4 @@
 
 ## Database Schema
 
-<iframe width="560" height="315" src='https://dbdiagram.io/embed/62b557ce69be0b672c3313e5'> </iframe>
+[Schema ](https://dbdiagram.io/d/62b557ce69be0b672c3313e5)
