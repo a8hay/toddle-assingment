@@ -19,6 +19,8 @@ const submissionSchema = mongoose.Schema(
   { timestamps: true }
 )
 
+submissionSchema.index({ user: 1, assingment: 1 }, { unique: true })
+
 const Submission = mongoose.model('Submission', submissionSchema)
 
 export default Submission

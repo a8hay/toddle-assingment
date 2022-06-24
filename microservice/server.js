@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: false }))
 
 app.use('/api/user', userRouter)
 app.use('/api/assingment', assingmentRouter)
-app.use('/api/', actionRouter)
+app.use('/api/action', actionRouter)
 
 app.use(errorHandler)
 
