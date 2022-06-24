@@ -15,12 +15,11 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
 app.get('/', (req, res) => {
-  res.send({'toddle backend assignment, refer github readme'})
+  res.status(200).json('toddle backend assignment, refer github readme')
 })
 app.use('/api/user', userRouter)
 app.use('/api/assingment', assingmentRouter)
 app.use('/api/action', actionRouter)
-
 app.use(errorHandler)
 
 app.listen(PORT, () => {
