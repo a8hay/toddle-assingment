@@ -1,12 +1,19 @@
 import expressAsyncHandler from 'express-async-handler'
 import Assingment from '../models/assingmentModel.js'
+import StudentAssingment from '../models/studentAssingmentModel.js'
 import User from '../models/userModel.js'
 
 // @desc    Get get all Assingments
 // @route   GET /api/assingment
 // @access  Private
 const getAssingment = expressAsyncHandler(async (req, res) => {
-  const assingments = await Assingment.find({ createdBy: req.user.id })
+  const userRole = req.user.role
+  let assingments
+  if (userRole === 'tutor') {
+    assingments = await Assingment.find({ createdBy: req.user.id })
+  } else if (userRole === 'student') {
+    assingments = await StudentAssingment.find({ user: req.user.id })
+  }
   res.status(200).json(assingments)
 })
 
